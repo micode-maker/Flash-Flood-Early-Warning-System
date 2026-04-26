@@ -1,2 +1,5 @@
 # Flash-Flood-Early-Warning-System
 Final Project for Predictive Modeling in AI
+
+## Description
+I built an ML early warning system to detect flash flood conditions on the Guadalupe River 6 hours in advance by identifying predictable signals like rising volatility, lagged gage heights, and historical forecast error patterns. In Phase 1, I forecasted daily gage height using linear regression with temporal features, which produced a negative R² and ~37% MAPE — proving that calendar data alone cannot predict episodic flood events. I treated periods where baseline forecast error exceeded 25% as crisis events, capturing 1,144 out of 7,608 days as anomalies concentrated in the May–October flood season. In Phase 2, I trained a SMOTE-balanced Random Forest classifier to predict these crisis events before they occur, achieving 89.7% recall and an F1-score of 0.844 on held-out test data, and implemented a four-tier alert system that categorises Normal, Watch, Warning, and Critical risk levels for county emergency managers.
